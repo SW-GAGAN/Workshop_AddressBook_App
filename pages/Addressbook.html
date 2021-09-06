@@ -5,16 +5,17 @@
     <!--UC1-->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel = "shortcut icon" href = "/assets/addressBook.png">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/css/Addressbook.css">
-    <title>Address Book</title>
+    <title>Add Person</title>
 </head>
 
 <body>
     <!-- UC-1 -->
     <header class="header-content header">
         <div class="logo-content">
-            <img src="/assets/addressBook.svg" alt="">
+            <img src="/assets/addressBook.png" alt="">
             <div>
                 <span class="add-text">ADDRESS</span><br>
                 <span class="add-text add-book">BOOK</span>
@@ -26,7 +27,7 @@
         <div class="content">
             <div class="top">
                 <div class="box">PERSON ADDRESS FORM</div>
-                <div class="push"><a href="/pages/Addressbook.html"><img src="/assets/cancels.png" alt=""></a></div>
+                <div class="push"><a href="/pages/home.html"><img src="/assets/cancels.png" alt=""></a></div>
             </div>
         </div>
     </div>
@@ -53,7 +54,7 @@
                     <label class="label-text" for="city">City</label>
                     <select class="select" id="city" name="city">
                         <option value="" selected disabled hidden>Select City</option>
-                        <option value="Bangalore">Bangalore</option>
+                        <option value="Bhopal">Bhopal</option>
                         <option value="Chennai">Chennai</option>
                         <option value="Delhi">Delhi</option>
                         <option value="Kolkata">Kolkata</option>
@@ -66,11 +67,11 @@
                     <label class="label-text" for="state">State</label>
                     <select class="select" id="state`" name="state">
                         <option value="" selected disabled hidden>Select State</option>
-                        <option value="Karnataka">Karnataka</option>
+                        <option value="Madhya Pradesh">Madhya Pradesh</option>
                         <option value="Maharashtra">Maharashtra</option>
                         <option value="Delhi">Delhi</option>
-                        <option value="Andrapradesh">Andrapradesh</option>
-                        <option value="TamilNadu">TamilNadu</option>
+                        <option value="West Bengal">West Bengal</option>
+                        <option value="Tamilnadu">Tamilnadu</option>
                     </select>
                 </div>
 
@@ -80,18 +81,19 @@
                     <error-output class="zip-error" for="text"></error-output>
                 </div>
             </div>
-            <!-- UC-5 -->
+       <!-- UC-5 -->
             <div class="buttonParent">
                 <div class="submit-reset">
                     <button type="reset" class="resetButton button">Reset</button>
-                    <button type="submit" class="button submitButton" id="submitButton">Add</button>
+                    <a href="/pages/home.html"><button type="submit" class="button submitButton" id="submitButton">Add</button></a>
                 </div>
             </div>
     </div>
     </form>
     </div>
     <script defer src="../js/AddressBookData.js"></script>
-    <script defer src="../js/addperson.js"></script>
+    <script defer src="../js/add-person.js"></script>
+
 </body>
 
 </html>
