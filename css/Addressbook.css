@@ -176,3 +176,51 @@ select{
     color: #42515f;
     background-color: transparent ;
 }
+/* UC-5 */
+.button{
+    cursor: pointer;
+}
+
+.submit-reset{
+    width: 100%;
+    display: flex;
+    flex-grow: 1;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    padding-top: 20px;
+}
+
+.submitButton{
+    width: 100px;
+    height: 40px;
+    text-align: center;
+    font: normal normal normal 17px/23px Roboto;
+    color: #aa0505;
+    background: #c0bebd 0% 0% no-repeat padding-box;
+    border-radius: 4px;
+    border: 1px solid rgb(14, 1, 44);
+    opacity: 1;
+    margin-left: 60px;
+}
+
+.resetButton{
+    width: 100px;
+    height: 40px;
+    text-align: right;
+    font: normal normal normal 17px/23px Roboto;
+    letter-spacing: 0px;
+    text-align: center;
+    border-radius: 4px;
+    background: #c0bebd 0% 0% no-repeat padding-box;
+    border: 1px solid rgb(10, 1, 31);
+    color: #aa0505;
+    opacity: 1;
+}
+
+.buttonParent{
+    display: flex;
+    margin-bottom: 10px;
+    justify-content: space-between;
+    margin-top: 10px;
+}
