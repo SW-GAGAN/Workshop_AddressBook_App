@@ -62,9 +62,10 @@ window.addEventListener('DOMContentLoaded', (event) => {
 
 // UC-6
 const save = () => {
-    try {
+    try{
         let addressBookData = createAddressBook();
-    } catch (e) {
+        createAndUpdateStorage(addressBookData);
+    }catch (e) {
         return;
     }
 }
@@ -72,22 +73,45 @@ const save = () => {
 //UC-6
 const createAddressBook = () => {
     let addressBookData = new AddressBookData();
-    try {
+    try{
         addressBookData.fullname = getInputValuesById('#name');
-    } catch (e) {
+    }catch(e){
         setTextValue('.test-error', e);
         throw e;
     }
     addressBookData.phone = getInputValuesById('#phone');
     addressBookData.address = getInputValuesById('#address');
-    addressBookData.city = getInputValuesById('[name=city]');
-    addressBookData.state = getInputValuesById('[name=state]');
+    addressBookData.city = getInputValuesById('#city');
+    addressBookData.state = getInputValuesById('#state');
     addressBookData.zip = getInputValuesById('#zip');
     alert(addressBookData.toString());
     return addressBookData;
 }
 
+// UC-8
+function createAndUpdateStorage(addressBookData){
+    let addressBookList = JSON.parse(localStorage.getItem("AddressBookList"));
+    if(addressBookList != undefined){
+        addressBookList.push(addressBookData);
+    }
+    else{
+        addressBookList = [addressBookData];
+    }
+    alert(addressBookList.toString());
+    localStorage.setItem("AddressBookList", JSON.stringify(addressBookList));
+}
+
 const getInputValuesById = (id) => {
     let value = document.querySelector(id).value;
     return value;
+}
+
+//UC-9
+const resetForm = () => {
+    setValue('#name','');
+    setValue('#phone','');
+    setValue('#address','');
+    setValue('#city','');
+    setValue('#state','');
+    setValue('#zip','');
 }
