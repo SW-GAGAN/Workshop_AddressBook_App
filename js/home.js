@@ -39,7 +39,7 @@ const createAddressBookJSON = () => {
         {
             _name: 'Shravya Reddy',
             _address: 'Shanthapuram',
-            _city: 'Hosur',
+            _city: 'Hosure',
             _state: 'Tamil Nadu',
             _zip: '653241',
             _phone: '7894561230',
