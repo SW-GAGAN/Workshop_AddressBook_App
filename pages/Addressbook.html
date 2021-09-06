@@ -11,12 +11,13 @@
 </head>
 
 <body>
+    <!-- UC-1 -->
     <header class="header-content header">
         <div class="logo-content">
-            <img src="/assets/addressBook.png" alt="">
+            <img src="/assets/addressBook.svg" alt="">
             <div>
-                <span class="add-text"><b>ADDRESS</b></span><br>
-                <span class="add-text add-book"><b>BOOK</b></span>
+                <span class="add-text">ADDRESS</span><br>
+                <span class="add-text add-book">BOOK</span>
             </div>
         </div>
     </header>
@@ -40,11 +41,12 @@
             <div class="row-content">
                 <label class="label-text" for="phone">Phone Number</label>
                 <input class="input" type="text" id="phone" name="phone" placeholder="" required>
-                <error-output class="text-error" for="text"></error-output>
+                <error-output class="phone-error" for="text"></error-output>
             </div>
             <div class="row-content">
                 <label class="label-text" for="address">Address</label>
                 <input class="input-address" type="text" id="address" name="address" placeholder="" required>
+                <error-output class="add-error" for="text"></error-output>
             </div>
             <div class="row-content-select">
                 <div class="place">
@@ -67,7 +69,7 @@
                         <option value="1">Karnataka</option>
                         <option value="2">Maharashtra</option>
                         <option value="3">Delhi</option>
-                        <option value="4">Andharapradesh</option>
+                        <option value="4">Andrapradesh</option>
                         <option value="5">TamilNadu</option>
                     </select>
                 </div>
@@ -75,10 +77,15 @@
                 <div class="place">
                     <label class="label-text" for="zip">Zip-Code</label>
                     <input class="input" type="text" id="zip" name="zip" placeholder="" required>
+                    <error-output class="zip-error" for="text"></error-output>
                 </div>
             </div>
     </div>
     </form>
+    </div>
+    <script defer src="../js/AddressBookData.js"></script>
+    <script defer src="../js/addperson.js"></script>
+
 </body>
 
 </html>
